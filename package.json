@@ -1,0 +1,53 @@
+{
+    "name": "@meepen/poe-accountant-api",
+    "version": "0.0.9",
+    "description": "Common API schemas for the Path of Exile Accountant application",
+    "private": false,
+    "scripts": {
+        "test": "jasmine",
+        "prebuild": "rimraf dist",
+        "build": "tsc",
+        "scrape": "tsx scrape.ts"
+    },
+    "devDependencies": {
+        "@types/jsdom": "^21.1.7",
+        "axios": "^1.10.0",
+        "jasmine": "^5.8.0",
+        "jsdom": "^26.1.0",
+        "rimraf": "^6.0.1",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
+    },
+    "type": "module",
+    "files": [
+        "src/**/*.d.ts",
+        "dist/**/*.js",
+        "dist/**/*.js.map",
+        "dist/**/*.d.ts",
+        "tsconfig.json",
+        "package.json"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "author": {
+        "email": "meep@meepen.dev",
+        "name": "Meepen",
+        "url": "https://github.com/meepen"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/meepen/poe-common.git"
+    },
+    "peerDependencies": {
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.2"
+    },
+    "dependencies": {
+        "@meepen/poe-common": "^2.0.0"
+    }
+}

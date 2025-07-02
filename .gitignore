@@ -1,0 +1,10 @@
+*.js.map
+*.js
+node_modules
+docs
+dist
+
+
+*.tar.gz
+
+meepen-poe-accountant-api-*.tgz
